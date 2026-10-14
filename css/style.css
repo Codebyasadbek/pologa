@@ -165,6 +165,7 @@ h3 { font-size: 20px; }
 .mtable td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
 .mtable td:last-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
 .mtable--sm td { padding: 9px 16px 9px 0; }
+@media (max-width: 420px) { .mtable--sm th, .mtable--sm td { padding-right: 8px; font-size: 13px; } .mtable--sm th:last-child, .mtable--sm td:last-child { padding-right: 0; } }
 @media (max-width: 760px) { .types { grid-template-columns: 1fr; gap: 36px; } }
 /* На телефоне таблица материалов превращается в список, чтобы ничего не обрезалось */
 @media (max-width: 600px) {
