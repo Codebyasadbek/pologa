@@ -41,6 +41,7 @@ $rows = [
     'Имя'        => field('name', 100),
     'Телефон'    => $phone,
     'Материал'   => field('material', 50),
+    'Плотность'  => field('grade', 50),
     'Тип'        => field('type', 50),
     'Размер'     => ($length !== '' && $width !== '') ? "$length × $width м" : '',
     'Количество' => field('qty', 10),

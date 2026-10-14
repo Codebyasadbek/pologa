@@ -6,15 +6,10 @@
       khv: '+7 (000) 000-00-00', // TODO: номер для Хабаровска
     },
     metrikaId: 0, // TODO: номер счётчика Яндекс Метрики
-    // Цена за м² в рублях, null = «по запросу»
-    prices: {
-      pvh:     { single: 180, warm: null }, // TODO: подтвердить у клиента (взято с тактикатент.рф, тент ПВХ 400 г/м²)
-      tarp:    { single: null, warm: null },
-      brezent: { single: null, warm: null },
-      avizent: { single: null, warm: null },
-    },
+    // Цены за м² задаются в index.html, в таблицах .ptable (data-price у строки)
     // Ходовые размеры для таблицы цен, длина × ширина в метрах
     sizes: [[3, 4], [4, 6], [6, 8], [8, 10], [10, 12], [10, 15], [15, 20]],
+    sizeCols: [['tarp', '120 г/м²'], ['pvh', '400 г/м²']], // колонки таблицы ходовых размеров
   };
 
   const $ = (s, r = document) => r.querySelector(s);
@@ -41,30 +36,23 @@
   $$('[data-phone-text]').forEach(el => { el.textContent = CONFIG.phones[el.dataset.phoneText]; });
   document.addEventListener('click', e => { if (e.target.closest('a[href^="tel:"]')) goal('phone_click'); });
 
-  // Цены
-  const price = (material, type) => (CONFIG.prices[material] || {})[type] || null;
+  // Цены: читаем из таблиц .ptable, чтобы цена менялась в одном месте
+  const mats = {};
+  $$('.ptable').forEach(t => {
+    mats[t.dataset.mat] = $$('tr[data-grade]', t).map(r => ({ grade: r.dataset.grade, price: +r.dataset.price || null }));
+  });
+  const gradePrice = (mat, grade) => ((mats[mat] || []).find(g => g.grade === grade) || {}).price || null;
   const minOf = list => { const v = list.filter(Boolean); return v.length ? Math.min(...v) : null; };
 
-  $$('[data-price]').forEach(el => {
-    const p = CONFIG.prices[el.dataset.price];
-    const v = minOf([p.single, p.warm]);
-    if (v) el.textContent = `от ${fmt(v)} ₽`;
-  });
-  $$('[data-from]').forEach(el => {
-    const v = minOf(Object.keys(CONFIG.prices).map(m => price(m, el.dataset.from)));
-    if (v) el.textContent = `от ${fmt(v)} ₽/м²`;
-  });
+  const single = minOf(Object.values(mats).flat().map(g => g.price));
+  $$('[data-from="single"]').forEach(el => { if (single) el.textContent = `от ${fmt(single)} ₽/м²`; });
 
   // Таблица ходовых размеров показывается, только когда есть цены
   const sizesBody = $('[data-sizes]');
-  const tarp = price('tarp', 'single');
-  const pvh = price('pvh', 'single');
-  if (sizesBody && (tarp || pvh)) {
+  const cols = CONFIG.sizeCols.map(([m, g]) => gradePrice(m, g));
+  if (sizesBody && cols.some(Boolean)) {
     const cell = (area, p) => p ? fmt(Math.round(area * p)) + ' ₽' : 'по запросу';
-    sizesBody.innerHTML = CONFIG.sizes.map(([l, w]) => {
-      const area = l * w;
-      return `<tr><td>${l} × ${w} м</td><td>${cell(area, tarp)}</td><td>${cell(area, pvh)}</td></tr>`;
-    }).join('');
+    sizesBody.innerHTML = CONFIG.sizes.map(([l, w]) => `<tr><td>${l} × ${w} м</td>${cols.map(p => `<td>${cell(l * w, p)}</td>`).join('')}</tr>`).join('');
     $('[data-price-table]').hidden = false;
   }
 
@@ -73,23 +61,31 @@
   if (calc) {
     const f = calc.elements;
     const num = el => Math.max(0, parseFloat(String(el.value).replace(',', '.')) || 0);
+    const matKey = () => f.material.selectedOptions[0].dataset.key;
+    const fillGrades = () => {
+      f.grade.innerHTML = (mats[matKey()] || []).map(g =>
+        `<option value="${g.grade}">${g.grade} · ${g.price ? 'от ' + fmt(g.price) + ' ₽/м²' : 'по запросу'}</option>`).join('');
+      const firstPriced = (mats[matKey()] || []).findIndex(g => g.price);
+      if (firstPriced > 0) f.grade.selectedIndex = firstPriced;
+    };
     const update = () => {
       const qty = Math.max(1, Math.round(num(f.qty)));
       const area = Math.round(num(f.namedItem('length')) * num(f.width) * qty * 10) / 10;
-      const p = price(f.material.selectedOptions[0].dataset.key, f.type.selectedOptions[0].dataset.key);
+      const p = f.type.checked ? null : gradePrice(matKey(), f.grade.value);
       const total = p && area ? Math.round(area * p) : 0;
       $('#calc-area').textContent = area ? fmt(area) + ' м²' : '—';
       $('#calc-price').textContent = total ? '≈ ' + fmt(total) + ' ₽' : 'рассчитаем';
       f.area.value = area ? area + ' м²' : '';
       f.estimate.value = total ? total + ' ₽' : '';
     };
+    f.material.addEventListener('change', fillGrades);
     calc.addEventListener('input', update);
     calc.addEventListener('change', update);
+    fillGrades();
     update();
 
     $$('[data-pick-type]').forEach(a => a.addEventListener('click', () => {
-      const opt = [...f.type.options].find(o => o.dataset.key === a.dataset.pickType);
-      if (opt) { f.type.value = opt.value; update(); }
+      f.type.checked = a.dataset.pickType === 'warm'; update();
     }));
   }
 

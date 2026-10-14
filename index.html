@@ -89,8 +89,7 @@
           <img src="assets/img/warm.jpg" alt="Изделия из ПВХ перед отгрузкой" loading="lazy">
           <h3>Утеплённые трёхслойные</h3>
           <p>Наружный слой, утеплитель и подкладка. Держат тепло при зимнем бетонировании и работах в мороз.</p>
-          <!-- TODO: уточнить у клиента утеплитель и материалы слоёв -->
-          <p class="tcard__meta">Утеплитель синтепон · люверсы по периметру</p>
+          <p class="tcard__meta">ПВХ с утеплителем изолон · люверсы по периметру</p>
           <div class="tcard__foot">
             <span class="tcard__price" data-from="warm">Цена по запросу</span>
             <a href="#calc" class="link" data-pick-type="warm">Рассчитать →</a>
@@ -98,19 +97,57 @@
         </article>
       </div>
 
-      <h3 class="subhead">Материалы</h3>
-      <!-- TODO: сверить плотности с клиентом -->
-      <div class="table-wrap">
-        <table class="mtable">
-          <thead><tr><th>Материал</th><th>Плотность</th><th>Чем хорош</th><th>Цена за м²</th></tr></thead>
-          <tbody>
-            <tr><td>ПВХ</td><td>400–900 г/м²</td><td>Для долгой работы на улице. Не боится мороза, солнца и ветра</td><td data-price="pvh">по запросу</td></tr>
-            <tr><td>Тарпаулин</td><td>120–250 г/м²</td><td>Лёгкий, водонепроницаемый и недорогой. Для временных укрытий</td><td data-price="tarp">по запросу</td></tr>
-            <tr><td>Брезент</td><td>ОП, ВО</td><td>Дышит и не копит конденсат. С пропиткой ОП не горит</td><td data-price="brezent">по запросу</td></tr>
-            <tr><td>Авизент</td><td>по запросу</td><td>Плотная техническая ткань для тяжёлых условий</td><td data-price="avizent">по запросу</td></tr>
-          </tbody>
-        </table>
+      <h3 class="subhead">Цены за м²</h3>
+      <div class="prices">
+        <div class="pcard pcard--tall">
+          <h4>ПВХ</h4>
+          <p>Для долгой работы на улице. Не боится мороза, солнца и ветра</p>
+          <table class="ptable" data-mat="pvh" data-name="ПВХ">
+            <tr data-grade="300 г/м²" data-price="92"><td>300 г/м²</td><td>от 92 ₽</td></tr>
+            <tr data-grade="400 г/м²" data-price="110"><td>400 г/м²</td><td>от 110 ₽</td></tr>
+            <tr data-grade="450 г/м²"><td>450 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="500 г/м²" data-price="122"><td>500 г/м²</td><td>от 122 ₽</td></tr>
+            <tr data-grade="550 г/м²"><td>550 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="580 г/м²"><td>580 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="630 г/м²" data-price="140"><td>630 г/м²</td><td>от 140 ₽</td></tr>
+            <tr data-grade="650 г/м²" data-price="155"><td>650 г/м²</td><td>от 155 ₽</td></tr>
+            <tr data-grade="700 г/м²"><td>700 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="750 г/м²" data-price="196"><td>750 г/м²</td><td>от 196 ₽</td></tr>
+            <tr data-grade="900 г/м²" data-price="265"><td>900 г/м²</td><td>от 265 ₽</td></tr>
+          </table>
+        </div>
+        <div class="pcard">
+          <h4>Тарпаулин</h4>
+          <p>Лёгкий, водонепроницаемый и недорогой. Для временных укрытий</p>
+          <table class="ptable" data-mat="tarp" data-name="Тарпаулин">
+            <tr data-grade="90 г/м²"><td>90 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="120 г/м²" data-price="30"><td>120 г/м²</td><td>от 30 ₽</td></tr>
+            <tr data-grade="160 г/м²"><td>160 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="180 г/м²"><td>180 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="220 г/м²"><td>220 г/м²</td><td>по запросу</td></tr>
+          </table>
+        </div>
+        <div class="pcard">
+          <h4>Брезент</h4>
+          <p>Дышит и не копит конденсат. Огнеупорный не горит</p>
+          <table class="ptable" data-mat="brezent" data-name="Брезент">
+            <tr data-grade="огнеупорный" data-price="90"><td>огнеупорный</td><td>от 90 ₽</td></tr>
+            <tr data-grade="СКПВ" data-price="105"><td>СКПВ</td><td>от 105 ₽</td></tr>
+          </table>
+        </div>
+        <div class="pcard">
+          <h4>Авизент</h4>
+          <p>Плотная техническая ткань. СКПВ с УФ-пропиткой и защитой от грибка</p>
+          <table class="ptable" data-mat="avizent" data-name="Авизент">
+            <tr data-grade="огнеупорный 320 г/м²"><td>огнеупорный 320 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="СКПВ 350 г/м²"><td>СКПВ 350 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="СКПВ 500 г/м²"><td>СКПВ 500 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="СКПВ 600 г/м²"><td>СКПВ 600 г/м²</td><td>по запросу</td></tr>
+            <tr data-grade="СКПВ 640 г/м²"><td>СКПВ 640 г/м²</td><td>по запросу</td></tr>
+          </table>
+        </div>
       </div>
+      <p class="prices__note">Цена зависит от размера, люверсов и объёма заказа. Точную стоимость пришлём после расчёта.</p>
     </div>
   </section>
 
@@ -124,7 +161,7 @@
         <div class="sizes" data-price-table hidden>
           <h3>Ходовые размеры</h3>
           <table class="mtable mtable--sm">
-            <thead><tr><th>Размер</th><th>Тарпаулин</th><th>ПВХ</th></tr></thead>
+            <thead><tr><th>Размер</th><th>Тарпаулин 120 г</th><th>ПВХ 400 г</th></tr></thead>
             <tbody data-sizes></tbody>
           </table>
         </div>
@@ -140,11 +177,8 @@
               <option value="Авизент" data-key="avizent">Авизент</option>
             </select>
           </label>
-          <label class="field"><span>Тип</span>
-            <select class="input" name="type">
-              <option value="Однослойный" data-key="single">Однослойный</option>
-              <option value="Утеплённый трёхслойный" data-key="warm">Утеплённый</option>
-            </select>
+          <label class="field"><span>Плотность</span>
+            <select class="input" name="grade"></select>
           </label>
         </div>
         <div class="row row--3">
@@ -152,7 +186,10 @@
           <label class="field"><span>Ширина, м</span><input class="input" type="number" name="width" value="4" min="0.5" step="0.1" inputmode="decimal"></label>
           <label class="field"><span>Кол-во, шт</span><input class="input" type="number" name="qty" value="1" min="1" step="1" inputmode="numeric"></label>
         </div>
-        <label class="check"><input type="checkbox" name="grommets" value="Да" checked><span>Люверсы по периметру</span></label>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="grommets" value="Да" checked><span>Люверсы по периметру</span></label>
+          <label class="check"><input type="checkbox" name="type" value="Утеплённый, изолон"><span>Утеплённый, с изолоном</span></label>
+        </div>
 
         <div class="calc__result" aria-live="polite">
           <div><span>Площадь</span><b id="calc-area">24 м²</b></div>
@@ -182,12 +219,12 @@
           <div class="plant">
             <h3>Домодедово</h3>
             <p>Основной цех. Отгрузка по Москве, области и центральной России.</p>
-            <p class="plant__contact">[адрес цеха]<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+            <p class="plant__contact">г. Домодедово, ул. Индустриальная<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
           </div>
           <div class="plant">
             <h3>Хабаровск</h3>
             <p>Отгрузка по Хабаровскому краю и всему Дальнему Востоку.</p>
-            <p class="plant__contact">[адрес цеха]<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+            <p class="plant__contact">г. Хабаровск, ул. Суворова, 82А<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
           </div>
         </div>
       </div>
@@ -269,20 +306,19 @@
 
 </main>
 
-<!-- TODO: реквизиты и адреса от клиента -->
 <footer class="footer">
   <div class="container footer__in">
     <div>
       <p class="footer__name">Строительные полога от производителя</p>
-      <p>[Название компании]<br>ИНН [—] · ОГРН [—]</p>
+      <p>ИНН 5009134537 · КПП 500901001<br>ОГРН 1235000015788</p>
     </div>
     <div>
       <b>Домодедово</b>
-      <p>[адрес цеха]<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+      <p>г. Домодедово, ул. Индустриальная<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
     </div>
     <div>
       <b>Хабаровск</b>
-      <p>[адрес цеха]<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+      <p>г. Хабаровск, ул. Суворова, 82А<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
     </div>
     <div>
       <p><a href="policy.html">Политика конфиденциальности</a></p>
