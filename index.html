@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Строительные полога от производителя — ПВХ, тарпаулин, брезент, авизент</title>
+<meta name="description" content="Шьём строительные полога любых размеров: однослойные и утеплённые, с люверсами. Цеха в Домодедово и Хабаровске. Цены производителя, отгрузка по всей России.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Строительные полога от производителя">
+<meta property="og:description" content="Однослойные и утеплённые полога любых размеров. Цеха в Домодедово и Хабаровске.">
+<meta name="theme-color" content="#23272c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"%3E%3Cpath fill="%2323272C" d="M18 8h57l35 35v67a10 10 0 0 1-10 10H18A10 10 0 0 1 8 110V18A10 10 0 0 1 18 8Z"/%3E%3Cpath fill="%23FFC20E" d="M75 8v27a8 8 0 0 0 8 8h27Z"/%3E%3Cpath fill="%23FFFFFF" d="M75 8h8v27a8 8 0 0 0 8 8h27v8H91a16 16 0 0 1-16-16Z"/%3E%3Ccircle cx="35" cy="91" r="13" fill="%23FFFFFF"/%3E%3Ccircle cx="35" cy="91" r="8" fill="%23FFC20E"/%3E%3C/svg%3E">
+<!-- TODO: перед запуском подключить шрифт локально (152-ФЗ) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="На главную">
+      <svg class="logo__mark" viewBox="0 0 128 128" aria-hidden="true"><path fill="#23272C" d="M18 8h57l35 35v67a10 10 0 0 1-10 10H18A10 10 0 0 1 8 110V18A10 10 0 0 1 18 8Z"/><path fill="#FFC20E" d="M75 8v27a8 8 0 0 0 8 8h27Z"/><path fill="#FFFFFF" d="M75 8h8v27a8 8 0 0 0 8 8h27v8H91a16 16 0 0 1-16-16Z"/><circle cx="35" cy="91" r="13" fill="#FFFFFF"/><circle cx="35" cy="91" r="8" fill="#FFC20E"/></svg>
+      <span class="logo__text">ПОЛОГА<small>производство пологов</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#types">Полога</a>
+      <a href="#calc">Цены</a>
+      <a href="#production">Производство</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#faq">Вопросы</a>
+      <div class="nav__extra">
+        <a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a><span>Москва</span>
+        <a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a><span>Хабаровск</span>
+      </div>
+    </nav>
+    <div class="header__phones">
+      <a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a><span>Москва</span>
+      <a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a><span>Хабаровск</span>
+    </div>
+    <button class="btn btn--sm header__btn" type="button" data-modal-open>Заказать звонок</button>
+    <a class="header__call" data-phone-link="msk" href="tel:+70000000000" aria-label="Позвонить">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+    </a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Первый экран: видео цеха (assets/hero.mp4), на мобиле только кадр из него -->
+  <section class="hero">
+    <img class="hero__bg" src="assets/hero-poster.jpg" alt="">
+    <video class="hero__video" muted loop playsinline preload="none" data-src="assets/hero.mp4" aria-hidden="true"></video>
+    <div class="container hero__in">
+      <h1>Строительные полога от&nbsp;производителя</h1>
+      <p class="hero__sub">Однослойные и утеплённые полога из ПВХ, тарпаулина, брезента и авизента. Шьём любые размеры, ставим люверсы по периметру.</p>
+      <ul class="hero__points">
+        <li>Два цеха: Домодедово и Хабаровск</li>
+        <li>Цены производителя, без перекупов</li>
+        <li>Отгрузка по всей России</li>
+      </ul>
+      <div class="hero__actions">
+        <a href="#calc" class="btn btn--lg">Рассчитать стоимость</a>
+        <a href="tel:+70000000000" class="hero__call" data-phone-link="msk">или позвоните<b data-phone-text="msk">+7 (000) 000-00-00</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="types">
+    <div class="container">
+      <div class="sec__head">
+        <h2>Какие полога шьём</h2>
+        <p>Под размеры вашего объекта, из четырёх материалов</p>
+      </div>
+      <div class="types">
+        <article class="tcard">
+          <img src="assets/img/single.jpg" alt="Готовые изделия из ПВХ на складе в Домодедово" loading="lazy">
+          <h3>Однослойные полога</h3>
+          <p>Укрывают леса, фасады, кровлю, стройматериалы и технику от дождя, снега и ветра.</p>
+          <p class="tcard__meta">ПВХ, тарпаулин, брезент или авизент · люверсы по периметру</p>
+          <div class="tcard__foot">
+            <span class="tcard__price" data-from="single">Цена по запросу</span>
+            <a href="#calc" class="link" data-pick-type="single">Рассчитать →</a>
+          </div>
+        </article>
+        <article class="tcard">
+          <img src="assets/img/warm.jpg" alt="Изделия из ПВХ перед отгрузкой" loading="lazy">
+          <h3>Утеплённые трёхслойные</h3>
+          <p>Наружный слой, утеплитель и подкладка. Держат тепло при зимнем бетонировании и работах в мороз.</p>
+          <!-- TODO: уточнить у клиента утеплитель и материалы слоёв -->
+          <p class="tcard__meta">Утеплитель синтепон · люверсы по периметру</p>
+          <div class="tcard__foot">
+            <span class="tcard__price" data-from="warm">Цена по запросу</span>
+            <a href="#calc" class="link" data-pick-type="warm">Рассчитать →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subhead">Материалы</h3>
+      <!-- TODO: сверить плотности с клиентом -->
+      <div class="table-wrap">
+        <table class="mtable">
+          <thead><tr><th>Материал</th><th>Плотность</th><th>Чем хорош</th><th>Цена за м²</th></tr></thead>
+          <tbody>
+            <tr><td>ПВХ</td><td>400–900 г/м²</td><td>Для долгой работы на улице. Не боится мороза, солнца и ветра</td><td data-price="pvh">по запросу</td></tr>
+            <tr><td>Тарпаулин</td><td>120–250 г/м²</td><td>Лёгкий, водонепроницаемый и недорогой. Для временных укрытий</td><td data-price="tarp">по запросу</td></tr>
+            <tr><td>Брезент</td><td>ОП, ВО</td><td>Дышит и не копит конденсат. С пропиткой ОП не горит</td><td data-price="brezent">по запросу</td></tr>
+            <tr><td>Авизент</td><td>по запросу</td><td>Плотная техническая ткань для тяжёлых условий</td><td data-price="avizent">по запросу</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--grey" id="calc">
+    <div class="container calc">
+      <div class="calc__info">
+        <h2>Рассчитайте стоимость</h2>
+        <p>Укажите материал и размер. Перезвоним, уточним детали и пришлём точный расчёт.</p>
+        <p class="calc__call">Удобнее по телефону?<a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+        <!-- Таблица появится сама, когда в js/main.js будут цены -->
+        <div class="sizes" data-price-table hidden>
+          <h3>Ходовые размеры</h3>
+          <table class="mtable mtable--sm">
+            <thead><tr><th>Размер</th><th>Тарпаулин</th><th>ПВХ</th></tr></thead>
+            <tbody data-sizes></tbody>
+          </table>
+        </div>
+      </div>
+
+      <form class="calc__form lead-form" id="calc-form" data-form="Калькулятор" novalidate>
+        <div class="row">
+          <label class="field"><span>Материал</span>
+            <select class="input" name="material">
+              <option value="ПВХ" data-key="pvh">ПВХ</option>
+              <option value="Тарпаулин" data-key="tarp">Тарпаулин</option>
+              <option value="Брезент" data-key="brezent">Брезент</option>
+              <option value="Авизент" data-key="avizent">Авизент</option>
+            </select>
+          </label>
+          <label class="field"><span>Тип</span>
+            <select class="input" name="type">
+              <option value="Однослойный" data-key="single">Однослойный</option>
+              <option value="Утеплённый трёхслойный" data-key="warm">Утеплённый</option>
+            </select>
+          </label>
+        </div>
+        <div class="row row--3">
+          <label class="field"><span>Длина, м</span><input class="input" type="number" name="length" value="6" min="0.5" step="0.1" inputmode="decimal"></label>
+          <label class="field"><span>Ширина, м</span><input class="input" type="number" name="width" value="4" min="0.5" step="0.1" inputmode="decimal"></label>
+          <label class="field"><span>Кол-во, шт</span><input class="input" type="number" name="qty" value="1" min="1" step="1" inputmode="numeric"></label>
+        </div>
+        <label class="check"><input type="checkbox" name="grommets" value="Да" checked><span>Люверсы по периметру</span></label>
+
+        <div class="calc__result" aria-live="polite">
+          <div><span>Площадь</span><b id="calc-area">24 м²</b></div>
+          <div><span>Стоимость</span><b id="calc-price">рассчитаем</b></div>
+        </div>
+        <input type="hidden" name="area">
+        <input type="hidden" name="estimate">
+
+        <div class="row">
+          <label class="field"><span>Имя</span><input class="input" name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+          <label class="field"><span>Телефон *</span><input class="input" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+        </div>
+        <label class="check check--small"><input type="checkbox" name="agree" value="Да"><span>Согласен на обработку <a href="policy.html" target="_blank">персональных данных</a></span></label>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--lg btn--block" type="submit">Получить точный расчёт</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="production">
+    <div class="container prod">
+      <div class="prod__text">
+        <h2>Своё производство в Подмосковье и на Дальнем Востоке</h2>
+        <p>Раскраиваем и шьём полога сами, на промышленных машинах, и сами ставим люверсы. Поэтому цена без наценки перекупов, а сроки зависят только от нас.</p>
+        <!-- TODO: адреса цехов от клиента -->
+        <div class="plants">
+          <div class="plant">
+            <h3>Домодедово</h3>
+            <p>Основной цех. Отгрузка по Москве, области и центральной России.</p>
+            <p class="plant__contact">[адрес цеха]<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+          </div>
+          <div class="plant">
+            <h3>Хабаровск</h3>
+            <p>Отгрузка по Хабаровскому краю и всему Дальнему Востоку.</p>
+            <p class="plant__contact">[адрес цеха]<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="prod__photos">
+        <figure class="prod__big"><img src="assets/img/sewing.jpg" alt="Пошив на промышленной швейной машине в цехе" loading="lazy"><figcaption>Пошив</figcaption></figure>
+        <figure><img src="assets/img/welding.jpg" alt="Сварка швов ПВХ на ТВЧ-прессе" loading="lazy"><figcaption>Сварка ТВЧ</figcaption></figure>
+        <figure><img src="assets/img/cutting.jpg" alt="Раскрой ПВХ ткани" loading="lazy"><figcaption>Раскрой</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--grey" id="delivery">
+    <div class="container order">
+      <div>
+        <h2>Как заказать</h2>
+        <ol class="steps">
+          <li><b>Заявка.</b> Оставляете заявку на сайте или звоните.</li>
+          <li><b>Расчёт.</b> Считаем стоимость под ваш размер и материал.</li>
+          <li><b>Пошив.</b> Раскраиваем, шьём и ставим люверсы.</li>
+          <li><b>Отгрузка.</b> Отправляем из Домодедово или Хабаровска.</li>
+        </ol>
+      </div>
+      <!-- TODO: уточнить у клиента самовывоз и доставку по Москве -->
+      <div>
+        <h2>Доставка</h2>
+        <ul class="dlist">
+          <li><b>Самовывоз</b> из цеха в Домодедово или Хабаровске</li>
+          <li><b>Москва и область:</b> привозим на объект</li>
+          <li><b>Вся Россия:</b> отправляем транспортными компаниями</li>
+        </ul>
+        <p class="order__note">Работаем с юрлицами, ИП и частными клиентами. Даём закрывающие документы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="container faq-wrap">
+      <h2>Частые вопросы</h2>
+      <div class="faq">
+        <details>
+          <summary>Можно сшить полог нестандартного размера?</summary>
+          <p>Да, шьём по вашим размерам. Укажите длину и ширину в расчёте или скажите по телефону.</p>
+        </details>
+        <details>
+          <summary>Какой материал выбрать?</summary>
+          <p>Для долгой работы подойдёт ПВХ, для временного укрытия тарпаулин. Если важна огнестойкость, брезент с пропиткой ОП. Для зимних работ утеплённый полог. Сомневаетесь, позвоните, подскажем.</p>
+        </details>
+        <details>
+          <summary>Как ставите люверсы?</summary>
+          <p>По периметру полога. Шаг подбираем под задачу, можно указать свой.</p>
+        </details>
+        <details>
+          <summary>Сколько шьётся заказ?</summary>
+          <p>Зависит от объёма и материала. Точный срок назовём при расчёте.</p>
+        </details>
+        <details>
+          <summary>Работаете с юрлицами?</summary>
+          <p>Да, работаем с юрлицами, ИП и частными клиентами. Даём все закрывающие документы.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__in">
+      <div class="cta__text">
+        <h2>Нужен полог под ваш объект?</h2>
+        <p>Оставьте телефон. Перезвоним, посчитаем и подскажем материал.</p>
+      </div>
+      <form class="cta__form lead-form" data-form="Нижняя форма" novalidate>
+        <input class="input" name="name" autocomplete="name" placeholder="Имя" aria-label="Имя">
+        <input class="input" name="phone" type="tel" autocomplete="tel" placeholder="Телефон *" aria-label="Телефон" required>
+        <button class="btn btn--dark" type="submit">Жду звонка</button>
+        <label class="check check--small"><input type="checkbox" name="agree" value="Да"><span>Согласен на обработку <a href="policy.html" target="_blank">персональных данных</a></span></label>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- TODO: реквизиты и адреса от клиента -->
+<footer class="footer">
+  <div class="container footer__in">
+    <div>
+      <p class="footer__name">Строительные полога от производителя</p>
+      <p>[Название компании]<br>ИНН [—] · ОГРН [—]</p>
+    </div>
+    <div>
+      <b>Домодедово</b>
+      <p>[адрес цеха]<br><a data-phone="msk" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+    </div>
+    <div>
+      <b>Хабаровск</b>
+      <p>[адрес цеха]<br><a data-phone="khv" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+    </div>
+    <div>
+      <p><a href="policy.html">Политика конфиденциальности</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn--dark" data-phone-link="msk" href="tel:+70000000000">Позвонить</a>
+  <a class="btn" href="#calc">Рассчитать</a>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Обратный звонок">
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+    <form class="lead-form modal__form" data-form="Заказать звонок" novalidate>
+      <h3>Перезвоним и посчитаем</h3>
+      <input class="input" name="name" autocomplete="name" placeholder="Имя" aria-label="Имя">
+      <input class="input" name="phone" type="tel" autocomplete="tel" placeholder="Телефон *" aria-label="Телефон" required>
+      <label class="check check--small"><input type="checkbox" name="agree" value="Да"><span>Согласен на обработку <a href="policy.html" target="_blank">персональных данных</a></span></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn--lg btn--block" type="submit">Перезвоните мне</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

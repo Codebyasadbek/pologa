@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Тент icon monochrome">
+  <path fill="#23272C" d="M18 8h57l35 35v67a10 10 0 0 1-10 10H18A10 10 0 0 1 8 110V18A10 10 0 0 1 18 8Z"/>
+  <path fill="#23272C" d="M75 8v27a8 8 0 0 0 8 8h27Z"/>
+  <path fill="#FFFFFF" d="M75 8h8v27a8 8 0 0 0 8 8h27v8H91a16 16 0 0 1-16-16Z"/>
+  <circle cx="35" cy="91" r="13" fill="#FFFFFF"/>
+  <circle cx="35" cy="91" r="8" fill="#23272C"/>
+</svg>

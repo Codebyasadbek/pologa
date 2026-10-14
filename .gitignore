@@ -1,0 +1,5 @@
+.DS_Store
+obzor-palatok.mp4
+obzor-poster.jpg
+leads/*
+!leads/.htaccess
